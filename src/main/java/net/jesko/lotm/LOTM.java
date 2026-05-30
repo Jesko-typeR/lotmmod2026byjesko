@@ -1,6 +1,7 @@
 package net.jesko.lotm;
 
 import com.mojang.logging.LogUtils;
+import net.jesko.lotm.item.ModCreativeModTabs;
 import net.jesko.lotm.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,8 @@ public class LOTM
     public LOTM(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
